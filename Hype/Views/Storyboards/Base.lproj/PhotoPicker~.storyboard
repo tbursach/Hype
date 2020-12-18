@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7YU-DL-wen">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="alI-f7-TQX">
+            <objects>
+                <viewController id="7YU-DL-wen" customClass="SignUpViewController" customModule="Hype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XTW-ca-fn1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="q8V-Q0-ENN">
+                                <rect key="frame" x="62" y="365.5" width="290" height="175"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKB-Os-G27">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W9h-Jf-IDR">
+                                        <rect key="frame" x="0.0" y="47" width="290" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnI-iC-YUv">
+                                        <rect key="frame" x="0.0" y="94" width="290" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter bio here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLu-C4-mtF">
+                                        <rect key="frame" x="0.0" y="141" width="290" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjL-uG-m68">
+                                <rect key="frame" x="298" y="556.5" width="54" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="7YU-DL-wen" eventType="touchUpInside" id="7xQ-eH-PWk"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVi-Sg-Zc9">
+                                <rect key="frame" x="62" y="185" width="124.5" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OVi-Sg-Zc9" secondAttribute="height" multiplier="1:1" id="Hbs-Jd-2na"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Ddx-xC-h8h" kind="embed" identifier="toPhotoPickerVC" id="h6D-gW-hVG"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qcq-0U-XMK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q8V-Q0-ENN" firstAttribute="width" secondItem="XTW-ca-fn1" secondAttribute="width" multiplier="0.7" id="Hou-bJ-m1q"/>
+                            <constraint firstItem="q8V-Q0-ENN" firstAttribute="top" secondItem="OVi-Sg-Zc9" secondAttribute="bottom" constant="56.5" id="TD6-ct-fVc"/>
+                            <constraint firstItem="OVi-Sg-Zc9" firstAttribute="leading" secondItem="q8V-Q0-ENN" secondAttribute="leading" id="hA9-Gh-0Mm"/>
+                            <constraint firstItem="q8V-Q0-ENN" firstAttribute="centerX" secondItem="Qcq-0U-XMK" secondAttribute="centerX" id="lOQ-yy-oZx"/>
+                            <constraint firstItem="CjL-uG-m68" firstAttribute="trailing" secondItem="q8V-Q0-ENN" secondAttribute="trailing" id="mCW-zY-VER"/>
+                            <constraint firstItem="OVi-Sg-Zc9" firstAttribute="width" secondItem="XTW-ca-fn1" secondAttribute="width" multiplier="0.3" id="mkx-X1-NUS"/>
+                            <constraint firstItem="q8V-Q0-ENN" firstAttribute="centerY" secondItem="Qcq-0U-XMK" secondAttribute="centerY" id="nrH-M7-c7b"/>
+                            <constraint firstItem="CjL-uG-m68" firstAttribute="top" secondItem="q8V-Q0-ENN" secondAttribute="bottom" constant="16" id="ype-0y-IBs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bioTextField" destination="RLu-C4-mtF" id="k9m-YH-xum"/>
+                        <outlet property="photoContainerView" destination="OVi-Sg-Zc9" id="9mC-LJ-Nhh"/>
+                        <outlet property="usernameTextField" destination="W9h-Jf-IDR" id="uD3-tV-xJY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccP-Xp-RiS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1038" y="104"/>
+        </scene>
+        <!--Photo Picker View Controller-->
+        <scene sceneID="F6j-uJ-QxK">
+            <objects>
+                <viewController id="Ddx-xC-h8h" customClass="PhotoPickerViewController" customModule="Hype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OS6-jU-8Vf">
+                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="124"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JgP-FR-ZUn">
+                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="124"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQH-CX-CXg">
+                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="124"/>
+                                <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPhotoButtonTapped:" destination="Ddx-xC-h8h" eventType="touchUpInside" id="AEa-HF-ha9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EAB-wg-1Ve"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lQH-CX-CXg" firstAttribute="leading" secondItem="EAB-wg-1Ve" secondAttribute="leading" id="58N-sk-H6C"/>
+                            <constraint firstItem="JgP-FR-ZUn" firstAttribute="top" secondItem="OS6-jU-8Vf" secondAttribute="top" id="AWp-ev-bR3"/>
+                            <constraint firstItem="EAB-wg-1Ve" firstAttribute="trailing" secondItem="JgP-FR-ZUn" secondAttribute="trailing" id="H2F-nd-AJq"/>
+                            <constraint firstAttribute="trailing" secondItem="lQH-CX-CXg" secondAttribute="trailing" id="TFr-Ow-yqO"/>
+                            <constraint firstItem="EAB-wg-1Ve" firstAttribute="bottom" secondItem="JgP-FR-ZUn" secondAttribute="bottom" id="Ura-hw-5XU"/>
+                            <constraint firstItem="lQH-CX-CXg" firstAttribute="bottom" secondItem="EAB-wg-1Ve" secondAttribute="bottom" id="aLg-bw-jQt"/>
+                            <constraint firstItem="JgP-FR-ZUn" firstAttribute="leading" secondItem="EAB-wg-1Ve" secondAttribute="leading" id="eDr-DU-h6D"/>
+                            <constraint firstItem="lQH-CX-CXg" firstAttribute="top" secondItem="OS6-jU-8Vf" secondAttribute="top" id="u8w-fD-FEi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="JgP-FR-ZUn" id="Zx2-65-pkm"/>
+                        <outlet property="selectPhotoButton" destination="lQH-CX-CXg" id="7lX-Cl-lEA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cxm-fr-Gsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-499.27536231884062" y="18.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
